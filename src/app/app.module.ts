@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { StockDetailComponent } from './stock-detail/stock-detail.component';
+import { StocksComponent } from './stocks/stocks.component';
+import { StocksDetailComponent } from './stocks-detail/stocks-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StockDetailComponent } from './stock-detail/stock-detail.component';
     NavbarComponent,
     SidebarComponent,
     DashboardComponent,
-    StockDetailComponent
+    StocksComponent,
+    StocksDetailComponent
   ],
   imports: [
     BrowserModule,
