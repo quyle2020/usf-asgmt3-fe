@@ -12,6 +12,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { SampleComponent } from './sample/sample.component';
+import { DividendsComponent } from './dividends/dividends.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SampleComponent } from './sample/sample.component';
     DashboardComponent,
     StocksComponent,
     StocksDetailComponent,
-    SampleComponent
+    SampleComponent,
+    DividendsComponent
   ],
   imports: [
     BrowserModule,
