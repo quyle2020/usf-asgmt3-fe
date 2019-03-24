@@ -13,6 +13,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { SampleComponent } from './sample/sample.component';
 import { DividendsComponent } from './dividends/dividends.component';
+import { DividendPicksComponent } from './dividend-picks/dividend-picks.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DividendsComponent } from './dividends/dividends.component';
     StocksComponent,
     StocksDetailComponent,
     SampleComponent,
-    DividendsComponent
+    DividendsComponent,
+    DividendPicksComponent
   ],
   imports: [
     BrowserModule,
