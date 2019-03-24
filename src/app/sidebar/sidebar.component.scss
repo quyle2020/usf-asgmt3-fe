@@ -1,7 +1,7 @@
 body {
     font-size: .875rem;
   }
-  
+
   .feather {
     width: 16px;
     height: 16px;
@@ -11,7 +11,13 @@ body {
   /*
    * Sidebar
    */
+
+   .nav-bg {
+    background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+  }
   
+
+
   .sidebar {
     position: fixed;
     top: 0;
@@ -47,9 +53,9 @@ body {
     margin-right: 4px;
     color: #999;
   }
-  
+
   .sidebar .nav-link.active {
-    color: #007bff;
+    color: #E91B98;
   }
   
   .sidebar .nav-link:hover .feather,
