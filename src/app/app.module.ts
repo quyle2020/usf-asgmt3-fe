@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SampleComponent } from './sample/sample.component';
 import { DividendsComponent } from './dividends/dividends.component';
 import { DividendPicksComponent } from './dividend-picks/dividend-picks.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DividendPicksComponent } from './dividend-picks/dividend-picks.componen
     StocksDetailComponent,
     SampleComponent,
     DividendsComponent,
-    DividendPicksComponent
+    DividendPicksComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,

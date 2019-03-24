@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DividendPicksComponent implements OnInit {
 
+  pageName = 'Dividend Picks';
+
   constructor() { }
 
   ngOnInit() {
