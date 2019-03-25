@@ -8,6 +8,8 @@ import * as Highcharts from 'highcharts';
 })
 export class DashboardComponent implements OnInit {
 
+  pageName = 'Welcome!';
+
 // chart parameters
 Highcharts = Highcharts;
 lineChart: any;
