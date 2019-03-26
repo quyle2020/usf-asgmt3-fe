@@ -1,6 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconFileText, IconHome, IconFile, IconShoppingCart, IconUsers, IconBarChart2, IconLayers, IconActivity } from 'angular-feather';
+import {
+  IconFileText,
+  IconHome,
+  IconFile,
+  IconShoppingCart,
+  IconUsers,
+  IconBarChart,
+  IconBarChart2,
+  IconLayers,
+  IconActivity,
+  IconDollarSign,
+  IconThumbsUp,
+  IconInfo } from 'angular-feather';
 
 @NgModule({
   declarations: [],
@@ -11,9 +23,13 @@ import { IconFileText, IconHome, IconFile, IconShoppingCart, IconUsers, IconBarC
     IconFile,
     IconShoppingCart,
     IconUsers,
+    IconBarChart,
     IconBarChart2,
     IconLayers,
-    IconActivity
+    IconActivity,
+    IconDollarSign,
+    IconThumbsUp,
+    IconInfo
   ]
 })
 export class SharedModule { }
