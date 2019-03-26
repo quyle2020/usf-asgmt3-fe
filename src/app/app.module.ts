@@ -16,6 +16,7 @@ import { DividendsComponent } from './dividends/dividends.component';
 import { DividendPicksComponent } from './dividend-picks/dividend-picks.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AboutComponent } from './about/about.component';
     DividendsComponent,
     DividendPicksComponent,
     TopbarComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
