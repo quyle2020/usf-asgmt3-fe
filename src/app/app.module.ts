@@ -9,8 +9,16 @@ import { StocksDetailComponent } from './stocks-detail/stocks-detail.component';
 import { SharedModule } from './shared/shared.module';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { AgGridModule } from 'ag-grid-angular';
+
 import { TopbarComponent } from './topbar/topbar.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+import { HttpClientModule } from '@angular/common/http';
+import { SampleComponent } from './sample/sample.component';
+import { DividendsComponent } from './dividends/dividends.component';
+import { DividendPicksComponent } from './dividend-picks/dividend-picks.component';
+import { TopbarComponent } from './topbar/topbar.component';
+
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
@@ -20,11 +28,18 @@ import { AboutComponent } from './about/about.component';
     DashboardComponent,
     StocksComponent,
     StocksDetailComponent,
+
+
+    SampleComponent,
+    DividendsComponent,
+    DividendPicksComponent,
+
     TopbarComponent,
     AboutComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     HighchartsChartModule,
     AngularFontAwesomeModule,

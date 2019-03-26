@@ -1,5 +1,6 @@
 <h2>
     {{ pageName }}
+
 </h2>
 <h4 class="text-muted">
     Stock Performers
@@ -7,6 +8,15 @@
 <hr/>
 
 <div class="row">
+
+  </h2>
+  <h4 class="text-muted">
+    Stock Performers
+  </h4>
+  <hr/>
+  
+  <div class="row">
+
     <div class="chart-container col-md-4">
         <highcharts-chart class="highchart-container" [Highcharts]="Highcharts" [options]="pieChart"></highcharts-chart>
     </div>
@@ -24,4 +34,10 @@
 <div style="overflow:hidden;">
     <ag-grid-angular class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs" (gridReady)="onGridReady($event)">
     </ag-grid-angular>
+
 </div>
+
+  </div>
+
+  
+

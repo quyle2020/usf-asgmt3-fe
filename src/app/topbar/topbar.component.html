@@ -1,5 +1,6 @@
 <nav class="navbar navbar-light fixed-top nav-bg" id="topbar">
-    <div class="container col-12">
+
+    <!--<div class="container col-12">
         <a class="navbar-brand mr-auto" href="/">
             <h3>BONZAI&trade;</h3>
         </a>
@@ -54,5 +55,61 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div>-->
+
+  <div class="container col-12">
+        <a class="navbar-brand mr-auto" href="/"><h3>BONZAI&trade;</h3></a>
+        <button class="navbar-toggler navbar-expand-sm" type="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="Navbar">
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                      <a routerLink = "/dashboard" routerLinkActive="active"  class="nav-link" href="#">
+                        <i-home></i-home>
+                        Dashboard <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a routerLink = "/stocks" routerLinkActive="active" class="nav-link" href="stocks">
+                        <i-bar-chart-2></i-bar-chart-2>
+                        Stocks
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink = "/dividends" routerLinkActive="active"  class="nav-link" href="dividends">
+                          <i-bar-chart-2></i-bar-chart-2>
+                          Dividends
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                          <a routerLink = "/dividend-picks" routerLinkActive="active"  class="nav-link" href="dividend-picks">
+                            <i-bar-chart-2></i-bar-chart-2>
+                            Dividend Picks
+                          </a>
+                        </li>
+                      <li class="nav-item">
+                          <a routerLink = "/sample" routerLinkActive="active"  class="nav-link" href="sample">
+                            <i-file></i-file>
+                            Sample API call
+                          </a>
+                        </li>
+                    <li class="nav-item">
+                      <a routerLink = "/service" routerLinkActive="active"  class="nav-link" href="#">
+                        <i-layers></i-layers>
+                        Integrations
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink = "/about" routerLinkActive="active"  class="nav-link" href="about">
+                          <i-file-text></i-file-text>
+                          About
+                        </a>
+                      </li>
+            </ul>
+        </div>
+  </div>
+
 </nav>

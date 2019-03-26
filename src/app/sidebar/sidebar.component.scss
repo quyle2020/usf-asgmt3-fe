@@ -1,5 +1,6 @@
 body {
     font-size: .875rem;
+
 }
 
 .feather {
@@ -14,6 +15,20 @@ body {
  */
 
 .sidebar {
+
+  }
+
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+  
+  /*
+   * Sidebar
+   */
+  .sidebar {
+
     position: fixed;
     top: 0;
     bottom: 0;
@@ -50,6 +65,7 @@ body {
 .sidebar .nav-link .feather {
     margin-right: 4px;
     color: #999;
+
 }
 
 .sidebar .nav-link.active {
@@ -67,6 +83,25 @@ body {
 }
 
 .sidebar-heading {
+
+  }
+
+  .sidebar .nav-link.active {
+    color: #E91B98;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+
+  .sidebar .nav-link:hover {
+    color: #E91B98;
+    background-color: #E9D5E1;
+  }
+  
+  .sidebar-heading {
+
     font-size: .75rem;
     text-transform: uppercase;
 }
