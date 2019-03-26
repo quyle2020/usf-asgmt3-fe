@@ -1,2 +1,23 @@
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Titillium+Web');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+[class*="highcharts"] {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-bg {
+    background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+}

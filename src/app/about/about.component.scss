@@ -1,0 +1,47 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333
+}
+
+p {
+    padding: 10px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#header {
+    float: left;
+    height: 75px;
+    width: 1000px;
+    background: #FFB969;
+}
+
+#navigation {
+    float: left;
+    height: 40px;
+    width: 1000px;
+    background: #FF713D;
+}
+
+#content {
+    float: left;
+    background: #FFEBF1;
+    width: 850px;
+}
+
+#leftcolumn {
+    background: #FFF2ED;
+    width: 150px;
+    float: left;
+}
+
+#footer {
+    height: 40px;
+    width: 1000px;
+    background: #FFB88F;
+    clear: both;
+}
