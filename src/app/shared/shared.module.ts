@@ -12,7 +12,8 @@ import {
   IconActivity,
   IconDollarSign,
   IconThumbsUp,
-  IconInfo } from 'angular-feather';
+  IconInfo
+} from 'angular-feather';
 
 @NgModule({
   declarations: [],

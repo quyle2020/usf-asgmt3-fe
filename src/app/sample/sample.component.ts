@@ -10,6 +10,7 @@ import { SampleService } from '../service/sample.service';
 })
 export class SampleComponent implements OnInit {
 
+  pageName = 'Sample';
   sampleData = '';
 
   constructor(private sampleService: SampleService) { }
@@ -23,3 +24,4 @@ export class SampleComponent implements OnInit {
   }
 
 }
+

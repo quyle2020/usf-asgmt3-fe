@@ -10,15 +10,15 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'stocks', component: StocksComponent},
-  {path: 'stock-detail', component: StocksDetailComponent},
-  {path: 'sample', component: SampleComponent},
-  {path: 'dividends', component: DividendsComponent},
-  {path: 'dividend-picks', component: DividendPicksComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'home', component: HomeComponent}
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'stocks', component: StocksComponent },
+  { path: 'stock-detail', component: StocksDetailComponent },
+  { path: 'sample', component: SampleComponent },
+  { path: 'dividends', component: DividendsComponent },
+  { path: 'dividend-picks', component: DividendPicksComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
