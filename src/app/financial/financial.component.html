@@ -2,36 +2,64 @@
   <h1>{{ pageName }}</h1>
 </div>
 <div class="container">
-  <form class="form-inline">
-    <div class="form-group mx-sm-3 mb-2">
-      <input type="text" [formControl]="symbolName" />
-    </div>
-    <button (click)="findSymbol()" class="btn sm btn-dark">Find Symbol</button>
-  </form>
+
+    <div class="card">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input class="form-control" type="text" [formControl]="symbolName" />
+                </div>
+                <button (click)="findSymbol()" class="btn btn-dark mb-2">Find Symbol</button>
+              </form>
+        </div>
+      </div>
+
+
 
   <div *ngIf="show">
-    <table>
-        <tr> 
-          <th></th>
-          <ng-container *ngFor="let statement of financialStatements">
-          <td>{{statement.reportDate}}</td>
-          </ng-container>
-        </tr>
-      <tbody>
-        <tr>
-          <th>Operating Income</th>
-          <ng-container *ngFor="let statement of financialStatements">
-            <td>{{statement.operatingIncome}}</td>
-            </ng-container>
-        </tr>
-        <tr>
-            <th>Operating Expenses</th>
-            <ng-container *ngFor="let statement of financialStatements">
-              <td>{{statement.operatingExpense}}</td>
-              </ng-container>
-          </tr>
-      </tbody>
-      </table>
+
+    <!-- <div class="row">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"></div>
+            <div class="card-body">
+              <h5 class="card-title">{{ financialStatements.symbol }}</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+    </div> -->
+    
+        <div class="card">
+            <h5 class="card-header">Income Satement</h5>
+            <div class="card-body">
+              <h5 class="card-title">Revenue</h5>
+              <table class="table">
+                  <tr> 
+                    <th>Report Date</th>
+                    <ng-container *ngFor="let statement of financialStatements">
+                    <td>{{statement.reportDate | date}}</td>
+                    </ng-container>
+                  </tr>
+                <tbody>
+                  <tr>
+                    <th>Operating Income</th>
+                    <ng-container *ngFor="let statement of financialStatements">
+                      <td>{{statement.operatingIncome | currency }}</td>
+                      </ng-container>
+                  </tr>
+                  <tr>
+                      <th>Operating Expenses</th>
+                      <ng-container *ngFor="let statement of financialStatements">
+                        <td>{{statement.operatingExpense | currency }}</td>
+                        </ng-container>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+
+
+    
+
   </div>
 </div>
 
