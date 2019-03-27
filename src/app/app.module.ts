@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,10 @@ import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { SampleComponent } from './sample/sample.component';
 import { DividendsComponent } from './dividends/dividends.component';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { DividendPicksComponent } from './dividend-picks/dividend-picks.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     StocksComponent,
     StocksDetailComponent,
     SampleComponent,
-    DividendsComponent
+    DividendsComponent,
+    DividendPicksComponent,
+    TopbarComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,10 +39,12 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     AppRoutingModule,
     HighchartsChartModule,
     SharedModule,
-    TooltipModule.forRoot(),
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  public isCollapsed = false;
+}

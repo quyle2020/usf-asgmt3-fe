@@ -1,6 +1,19 @@
 {
-  "ExpandedNodes": [
-    ""
-  ],
-  "PreviewInSolutionExplorer": false
+    "ExpandedNodes": [
+        "",
+        "\\src",
+        "\\src\\app",
+        "\\src\\app\\home",
+        "\\src\\app\\sample",
+        "\\src\\app\\service",
+        "\\src\\app\\shared",
+        "\\src\\app\\sidebar",
+        "\\src\\app\\stocks",
+        "\\src\\app\\stocks-detail",
+        "\\src\\app\\topbar",
+        "\\src\\assets",
+        "\\src\\environments"
+    ],
+    "SelectedNode": "\\src\\main.ts",
+    "PreviewInSolutionExplorer": false
 }

@@ -1,45 +1,46 @@
-<h2>
-    Sample Dashboard
-  </h2>
-  <h4 class="text-muted">
-    Here is a sample dash...
-  </h4>
-  <hr/>
-  
+<div class="jumbotron">
+  <h1>{{ pageName }}</h1>
+</div>
+<div class="container">
   <div class="row">
-    <div class="chart-container col-md-4">
-      <highcharts-chart 
-        class="highchart-container" 
-        [Highcharts]="Highcharts" 
-        [options]="pieChart"
-      ></highcharts-chart>
-    </div>
-    <div class="chart-container col-md-8">
-      <highcharts-chart 
-        class="highchart-container" 
-        [Highcharts]="Highcharts" 
-        [options]="lineChart"
-      ></highcharts-chart>
+    <div>
+      <p>{{sampleData}}</p>
     </div>
   </div>
-  <hr />
-  
-  <div class="chart-container">
-    <highcharts-chart 
-      class="highchart-container" 
-      [Highcharts]="Highcharts" 
-      [options]="barChart"
-    ></highcharts-chart>
+
+</div>
+<h4 class="text-muted">
+  Stock Performers
+</h4>
+<hr />
+
+<div class="row">
+  <div class="chart-container col-md-4">
+    <highcharts-chart class="highchart-container"
+                      [Highcharts]="Highcharts"
+                      [options]="pieChart"></highcharts-chart>
   </div>
-  <hr />
-  
-  <div style="overflow:hidden;">
-    <ag-grid-angular 
-        class="ag-theme-balham"
-        [rowData]="rowData" 
-        [columnDefs]="columnDefs"
-        (gridReady)="onGridReady($event)"
-        >
-    </ag-grid-angular>
+  <div class="chart-container col-md-8">
+    <highcharts-chart class="highchart-container"
+                      [Highcharts]="Highcharts"
+                      [options]="lineChart"></highcharts-chart>
   </div>
-  
+</div>
+<hr />
+
+<div class="chart-container">
+  <highcharts-chart class="highchart-container"
+                    [Highcharts]="Highcharts"
+                    [options]="barChart"></highcharts-chart>
+</div>
+<hr />
+
+<div style="overflow:hidden;">
+  <ag-grid-angular class="ag-theme-balham"
+                   [rowData]="rowData"
+                   [columnDefs]="columnDefs"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+</div>
+
+
