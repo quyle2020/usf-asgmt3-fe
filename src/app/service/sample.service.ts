@@ -12,6 +12,7 @@ export class SampleService {
   baseUrl:string = environment.baseUrl;
 
   getSampleData() {
+    // return this.http.get(this.baseUrl + '/stock/getStockDividend/AAPL');
     return this.http.get(this.baseUrl + '/api/Values');
   }
 
