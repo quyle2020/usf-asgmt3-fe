@@ -31,25 +31,25 @@
         <div class="card">
             <h5 class="card-header">Income Satement</h5>
             <div class="card-body">
-              <h5 class="card-title">Revenue</h5>
+              <h5 class="card-title">Revenue <span>(all numbers in thousands)</span></h5>
               <table class="table">
                   <tr> 
                     <th>Report Date</th>
                     <ng-container *ngFor="let statement of financialStatements">
-                    <td>{{statement.reportDate | date}}</td>
+                    <td><p class="text-right">{{statement.reportDate | date}}</p></td>
                     </ng-container>
                   </tr>
                 <tbody>
                   <tr>
                     <th>Operating Income</th>
                     <ng-container *ngFor="let statement of financialStatements">
-                      <td>{{statement.operatingIncome | currency }}</td>
+                      <td><p class="text-right">{{statement.operatingIncome / 1000 }}</p></td>
                       </ng-container>
                   </tr>
                   <tr>
                       <th>Operating Expenses</th>
                       <ng-container *ngFor="let statement of financialStatements">
-                        <td>{{statement.operatingExpense | currency }}</td>
+                        <td><p class="text-right">{{statement.operatingExpense / 1000 }}</p></td>
                         </ng-container>
                     </tr>
                 </tbody>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SymbolService } from '../service/symbol.service';
 import { FormControl } from '@angular/forms';
-import { StockFinancial } from '../models/stock-financial'
+import { StockFinancial } from '../models/stock-financial';
 @Component({
   selector: 'app-financial',
   templateUrl: './financial.component.html',
@@ -22,7 +22,7 @@ export class FinancialComponent implements OnInit {
   findSymbol() {
     this.show = false;
     this.symbolService.getStockFinancialData(this.symbolName.value)
-      .subscribe((res)=>{
+      .subscribe((res) => {
         this.setFinancialData(res);
         this.show = true;
     });
@@ -30,10 +30,9 @@ export class FinancialComponent implements OnInit {
 
   ngOnInit() {
   }
- 
-  setFinancialData(res: StockFinancial[])
-  {
-    this.financialStatements = res.map(function(val){
+
+  setFinancialData(res: StockFinancial[]) {
+    this.financialStatements = res.map(function(val) {
       return {
         symbol: val.symbol,
         reportDate: val.reportDate,
@@ -54,9 +53,8 @@ export class FinancialComponent implements OnInit {
         totalDebt: val.totalDebt,
         shareholderEquity: val.shareholderEquity,
         cashChange: val.cashChange,
-        cashFlow: val.cashFlow,
-      }
+        cashFlow: val.cashFlow
+      };
     });
   }
-  
 }
