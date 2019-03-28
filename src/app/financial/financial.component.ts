@@ -2,30 +2,44 @@ import { Component, OnInit } from '@angular/core';
 import { SymbolService } from '../service/symbol.service';
 import { FormControl } from '@angular/forms';
 import { StockFinancial } from '../models/stock-financial';
+import { StockDetail } from '../models/stock-detail';
+import { StocksDetailComponent } from '../stocks-detail/stocks-detail.component';
+
 @Component({
   selector: 'app-financial',
   templateUrl: './financial.component.html',
   styleUrls: ['./financial.component.scss'],
   providers: [SymbolService]
 })
+
 export class FinancialComponent implements OnInit {
 
   // local variables
-  pageName = 'Financial Statements';
+  pageName = 'Financial Statement';
   symbolName = new FormControl('');
-  financialStatements: StockFinancial[] = [];  
+  financialStatements: StockFinancial[] = [];
+  stockDetails: StockDetail;
   show = false;
 
   constructor(private symbolService: SymbolService) { }
 
 
   findSymbol() {
+
     this.show = false;
+
     this.symbolService.getStockFinancialData(this.symbolName.value)
       .subscribe((res) => {
         this.setFinancialData(res);
         this.show = true;
     });
+
+    this.symbolService.getStockDetail(this.symbolName.value)
+    .subscribe((res) => {
+      this.stockDetails = res;
+      this.show = true;
+  });
+
   }
 
   ngOnInit() {
@@ -57,4 +71,5 @@ export class FinancialComponent implements OnInit {
       };
     });
   }
+
 }
