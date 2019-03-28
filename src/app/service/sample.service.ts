@@ -9,7 +9,7 @@ export class SampleService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl:string = environment.baseUrl;
+  baseUrl: string = environment.baseUrl;
 
   getSampleData() {
     return this.http.get(this.baseUrl + '/stock/getStockDividend/AAPL');

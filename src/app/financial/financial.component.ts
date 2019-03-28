@@ -13,7 +13,7 @@ export class FinancialComponent implements OnInit {
   // local variables
   pageName = 'Financial Statements';
   symbolName = new FormControl('');
-  financialStatements: StockFinancial[] = [];  
+  financialStatements: StockFinancial[] = [];
   show = false;
 
   constructor(private symbolService: SymbolService) { }
@@ -32,7 +32,7 @@ export class FinancialComponent implements OnInit {
   }
 
   setFinancialData(res: StockFinancial[]) {
-    this.financialStatements = res.map(function(val) {
+    this.financialStatements = res.map(function foo(val) {
       return {
         symbol: val.symbol,
         reportDate: val.reportDate,

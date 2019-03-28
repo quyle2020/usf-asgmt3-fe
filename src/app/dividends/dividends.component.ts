@@ -16,10 +16,10 @@ export class DividendsComponent implements OnInit {
 
   ngOnInit() {
     this.symbolService.getStockDividend('AAPL')
-      .subscribe((res)=>{
+      .subscribe((res) => {
         console.log(res);
-    });}
-           
-    
+    }); }
+
+
 
 }
