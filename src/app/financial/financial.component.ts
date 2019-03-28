@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SymbolService } from '../service/symbol.service';
 import { FormControl } from '@angular/forms';
 import { StockFinancial } from '../models/stock-financial';
+import { StockPrice } from '../models/stock-price';
 @Component({
   selector: 'app-financial',
   templateUrl: './financial.component.html',
@@ -14,6 +15,7 @@ export class FinancialComponent implements OnInit {
   pageName = 'Financial Statements';
   symbolName = new FormControl('');
   financialStatements: StockFinancial[] = [];
+  stockprice: StockPrice[] = [];
   show = false;
 
   constructor(private symbolService: SymbolService) { }
@@ -22,10 +24,17 @@ export class FinancialComponent implements OnInit {
   findSymbol() {
     this.show = false;
     this.symbolService.getStockFinancialData(this.symbolName.value)
-      .subscribe((res) => {
-        this.setFinancialData(res);
-        this.show = true;
+    .subscribe((res) => {
+      this.setFinancialData(res);
+      this.show = true;
     });
+    this.show = false;
+    this.symbolService.getStockPriceData(this.symbolName.value)
+        .subscribe((res1) => {
+          this.setPriceData(res1);
+          this.show = true;
+    });
+
   }
 
   ngOnInit() {
@@ -54,6 +63,19 @@ export class FinancialComponent implements OnInit {
         shareholderEquity: val.shareholderEquity,
         cashChange: val.cashChange,
         cashFlow: val.cashFlow
+      };
+    });
+  }
+  setPriceData(res1: StockPrice[]) {
+    this.stockprice = res1.map(function foo(val) {
+      return {
+        symbol:	val.symbol,
+        date:	val.date,
+        open:	val.open,
+        high:	val.high,
+        low:	val.low,
+        close:	val.close,
+        volume:	val.volume
       };
     });
   }

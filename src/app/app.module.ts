@@ -20,6 +20,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { FinancialComponent } from './financial/financial.component';
+import { PriceComponent } from './price/price.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FinancialComponent } from './financial/financial.component';
     TopbarComponent,
     AboutComponent,
     HomeComponent,
-    FinancialComponent
+    FinancialComponent,
+    PriceComponent
   ],
   imports: [
     BrowserModule,
