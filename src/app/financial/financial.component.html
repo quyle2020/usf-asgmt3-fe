@@ -23,22 +23,28 @@
     <div class="row mb-3">
         <div class="card text-white bg-dark mb-3 w-100">
             <div class="card-header text-uppercase">{{ stockDetails.exchange }}</div>
-            <div class="card-body col-6">
-              <h5 class="card-title">{{ stockDetails.companyName }} ({{ stockDetails.symbol }})</h5>
-              <p class="card-text">{{ stockDetails.description }}</p>
-            </div>
-            <div class="col-6">
-                <div class="card-body">
-                  <h6 class="card-title">Details</h6>
-                  <ul>
-                    <li>Sector: {{ stockDetails.sector }}</li>
-                    <li>Industry: {{ stockDetails.industry }}</li>
-                    <li>CEO: {{ stockDetails.ceo }}</li>
-                    <li>Website: {{ stockDetails.website }}</li>
-                  </ul>
-                </div>
+            <div class="card-body">
+              <div class="row">
+                  <div class="col">
+                      <h5 class="card-title">{{ stockDetails.companyName }} ({{ stockDetails.symbol }})</h5>
+                      <p class="card-text">{{ stockDetails.description }}</p>
+                  </div>
+                  <div class="col">
+                      <div class="card-body">
+                        <h6 class="card-title">Details</h6>
+                        <ul>
+                          <li>Sector: {{ stockDetails.sector }}</li>
+                          <li>Industry: {{ stockDetails.industry }}</li>
+                          <li>CEO: {{ stockDetails.ceo }}</li>
+                          <li>Website: {{ stockDetails.website }}</li>
+                        </ul>
+                      </div>
+                  </div>
               </div>
+
+
           </div>
+        </div>
     </div>
 
     <div class="row mb-3">
@@ -65,7 +71,13 @@
                       <ng-container *ngFor="let statement of financialStatements">
                         <td><p class="text-right">{{statement.operatingExpense / 1000 }}</p></td>
                         </ng-container>
-                    </tr>
+                  </tr>
+                  <tr class="bg-light">
+                      <th>Gross Profit</th>
+                      <ng-container *ngFor="let statement of financialStatements">
+                        <td class="font-weight-bold"><p class="text-right">{{statement.grossProfit / 1000 }}</p></td>
+                        </ng-container>
+                  </tr>
                 </tbody>
                 </table>
             </div>
