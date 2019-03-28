@@ -1,71 +1,101 @@
 <div class="jumbotron">
-    <h1>ABOUT PROJECT AND TEAM</h1>
+    <h1>{{ pageName }}</h1>
 </div>
 <div class="container">
-    <!--Poject Theme-->
-    <div class="card border-primary mb-3">
-        <h5 class="card-header">PROJECT THEME</h5>
-        <div class="card-body text-primary">
-            <h5 class="card-title">Project themed buisiness service name as BONZAI</h5>
-            <p class="card-text">
-                Bonsai is an asian art form using cultivation techniques to produce small trees. Bonsai trees are known to grow in obscure places given the right conditions. Likewise,this business service BONZAI ,could correctly guide its customers by providing lists
-                that could generate income even in the high volatility market where the company and customers would bothways generate wealth.Company generates list of long term best dividend stocks,list of best dividend stocks by sector, list of company's
-                top picks and let the customer to customize their own portfolio.
-            </p>
+    <div class="row">
+        <!--Poject Theme-->
+        <div class="card mb-3">
+            <h5 class="card-header">PROJECT BUSINESS SERVICE</h5>
+            <div class="card-body">
+                <p class="card-text">
+                    BONZAI&trade; is a fictional business service created for the purpose of a master's project for course ISM 6255 (Distributed Information Systems). BONZAI&trade; was inspired by the Japanese meaning of Bonsai. <i>Bonsai</i> is an asian
+                    art form using cultivation techniques to produce small trees. Bonsai trees are known for its resilience and its ability grow in obscure places given the right conditions. Likewise, this business service BONZAI&trade;, could provide
+                    guidance to its customers by providing insights that could generate income even in a high volatility market. In a real-world application, we would apply machine learning and AI to discover dividend stocks suited to the customer's needs.
+                    The deployed application utilizes IEX Trading APIs. The web app generates list of long term best dividend stocks, list of best dividend stocks by sector, list of company's top picks and allows the customer to search stocks.
+                </p>
+            </div>
         </div>
     </div>
     <!--About Project Team members-->
-    <div class="card border-primary mb-3">
-        <h5 class="card-header">PROJECT TEAM</h5>
-        <div class="card-body text-primary">
-            <h5 class="card-title">Meena Sundinti</h5>
-            <p class="card-text">
-                Meena has around 8 years experience in IT. She is currently working for AAA Auto Club Group. Supplying data for Membership Point Of Contact ,Finance ,Marketing and Analytics Department via Data Warehouse tools.
-            </p>
-            <h5 class="card-title">Khamsouk Sanvoravong</h5>
-            <p class="card-text">
-                Kham has a Master in Electrical Engineering and works in manufacturing improving processes and design. He aspires to work on autonomous systems such as drones, automobiles, or other vehicles of transport. His goal is to start a business one day.
-            </p>
-            <h5 class="card-title">Quy Le</h5>
-            <p class="card-text">
-                Quy has more than 15 years experience in IT. He has recently switched to a manufacturing job to be more aligned with data science career path. Quy is planning to obtain an architecture role in three years and a C-level executive in five years respectively.
-            </p>
-        </div>
-    </div>
-    <!--Technolgy in development of this project-->
-    <div class="card border-primary mb-3">
-        <h5 class="card-header">TECHNOLOGY</h5>
-        <div class="card-body text-primary">
-            <h5 class="card-title">Technology involved in the project development</h5>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Frontend : Angular and Highcharts for providing stocks performance based upon the customers request for a day/5days/1month/year.</li>
-                <li class="list-group-item">Backend : SQL server interacting with .NET Core calling IEX Trading API with different end points</li>
-                <li class="list-group-item">Cloud environment : Azure</li>
-                <li class="list-group-item">Frontend Angular application is provided by an URL which connected the backend SQL server and .NET Core through which the API calls occur.</li>
-                <li class="list-group-item">The final business service site will be deployed to Azure.</li>
-            </ul>
-        </div>
-    </div>
-    <!--Takeaways from this project-->
-    <div class="card border-primary mb-3">
-        <h5 class="card-header">ACHIEVEMENTS</h5>
-        <div class="card-body text-primary">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Learned Angular Basics</li>
-                <li class="list-group-item">Working experience on cross platform</li>
-                <li class="list-group-item">Learnt Concept of Dependency Injection and how it works readily on Angular</li>
-                <li class="list-group-item">Make the site Azure ready</li>
-                <li class="list-group-item">Learnt basics of Type Safe JavaScript</li>
-            </ul>
-        </div>
-    </div>
     <div class="row">
-        <div class="card border-primary mb-3">
-            <div class="card-header">TEAM SUCCESS</div>
-            <blockquote class="blockquote mb-0">
-                <p class="font-italic">"None of us, including me, ever do great things. But we can all do small things, with great love, and together we can do something wonderful." – Mother Teresa</p>
-                <footer class="blockquote-footer"><cite title="Source Title">https://blog.hubspot.com/marketing/teamwork-quotes</cite></footer>
-            </blockquote>
+        <div class="card mb-3">
+            <h5 class="card-header">PROJECT TEAM</h5>
+            <div class="card-body">
+                <div class="card-group">
+
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Meena Sundinti</h5>
+                            <p class="card-text">Meena has around 8 years experience in IT. She is currently working for AAA Auto Club Group. Supplying data for Membership Point Of Contact ,Finance ,Marketing and Analytics Department via Data Warehouse tools.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Kham Sanvoravong</h5>
+                            <p class="card-text">Kham has a Master in Electrical Engineering and works in manufacturing improving processes and design. He aspires to work on autonomous systems such as drones, automobiles, or other vehicles of transport. His goal is to start
+                                a business one day.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Quy Le</h5>
+                            <p class="card-text">Quy has more than 15 years experience in IT. He has recently switched to a manufacturing job to be more aligned with data science career path. Quy is planning to obtain an architecture role in three years and a C-level executive
+                                in five years respectively.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
+
+
+    <!--Technolgy in development of this project-->
+    <div class="row">
+        <div class="card mb-3">
+            <h5 class="card-header">TECHNOLOGY</h5>
+            <div class="card-body">
+                <h5 class="card-title">Technology involved in the project development</h5>
+                <p>
+                    Frontend Angular application connects to custome API written in .NET Core. .NET Core syncs SQL Database and returned data from API call. Final web application is deployed to Azure.
+                </p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Frontend</b> : Angular 7</li>
+                    <li class="list-group-item"><b>Charting</b> : Highcharts</li>
+                    <li class="list-group-item"><b>Backend</b> : .NET Core using IEX Trading API with four end-points</li>
+                    <li class="list-group-item"><b>Database</b> : SQL Database</li>
+                    <li class="list-group-item"><b>API</b> : IEX Trading API</li>
+                    <li class="list-group-item"><b>Cloud</b> : Azure</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Takeaways from this project-->
+    <div class="row">
+        <div class="card mb-3 w-100">
+            <h5 class="card-header">ACHIEVEMENTS</h5>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Learnt <i>Angular 7, TypeScript, Bootstrap 4, C# 7 (ASP .NET Core), Azure</i></li>
+                    <li class="list-group-item">Experience using advanced charting tools like <i>Highcharts</i></li>
+                    <li class="list-group-item">Working experience on cross-platform development</li>
+                    <li class="list-group-item">Learned how to deploy your project to the cloud</li>
+                    <li class="list-group-item">Learnt the concept of dependency injection</li>
+                    <li class="list-group-item">Learned the value of <i>table-value parameters</i> for speed and cost savings</li>
+                    <li class="list-group-item">Learnt of Type-Safe JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <blockquote class="blockquote text-right">
+            <p class="font-italic">"None of us, including me, ever do great things. But we can all do small things, with great love, and together we can do something wonderful."</p>
+            <footer class="blockquote-footer"><cite title="Source Title">Mother Teresa</cite></footer>
+        </blockquote>
+    </div>
+
 </div>

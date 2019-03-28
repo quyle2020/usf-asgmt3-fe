@@ -1,11 +1,57 @@
 <div class="jumbotron">
     <h1>{{ pageName }}</h1>
 </div>
+
 <div class="container">
+
     <div class="row">
-        <div>
-            <p>{{sampleData}}</p>
-        </div>
+
+    </div>
+
+    <div class="row">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" sortable="symbol" (sort)="onSort($event)">Symbol</th>
+                    <th scope="col" sortable="exDate" (sort)="onSort($event)">ex-Date</th>
+                    <th scope="col" sortable="paymentDate" (sort)="onSort($event)">Payment Date</th>
+                    <th scope="col" sortable="recordDate" (sort)="onSort($event)">Record Date</th>
+                    <th scope="col" sortable="declaredDate" (sort)="onSort($event)">Declared Date</th>
+                    <th scope="col" sortable="amount" (sort)="onSort($event)">Amount</th>
+                    <th scope="col" sortable="type" (sort)="onSort($event)">Type</th>
+                    <th scope="col" sortable="qualified" (sort)="onSort($event)">Qualified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sample of sampleData">
+                    <th scope="row">{{sample.symbol}}</th>
+                    <td>{{sample.exDate | date }}</td>
+                    <td>{{sample.paymentDate | date }}</td>
+                    <td>{{sample.recordDate | date }}</td>
+                    <td>{{sample.declaredDate | date }}</td>
+                    <td>{{sample.amount | currency}}</td>
+                    <td>{{sample.type}}</td>
+                    <td>{{sample.qualified}}</td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
 
 </div>
+
+<!-- Value1, Value2 -->
+<!-- <p>{{ sampleData }}</p> -->
+
+
+<!-- <div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+    </ngb-pagination>
+  
+    <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+      <option [ngValue]="2">2 items per page</option>
+      <option [ngValue]="4">4 items per page</option>
+      <option [ngValue]="6">6 items per page</option>
+    </select>
+  </div> -->

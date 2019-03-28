@@ -1,0 +1,65 @@
+<div class="jumbotron">
+  <h1>{{ pageName }}</h1>
+</div>
+<div class="container">
+
+    <div class="card">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input class="form-control" type="text" [formControl]="symbolName" />
+                </div>
+                <button (click)="findSymbol()" class="btn btn-dark mb-2">Find Symbol</button>
+              </form>
+        </div>
+      </div>
+
+
+
+  <div *ngIf="show">
+
+    <!-- <div class="row">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header"></div>
+            <div class="card-body">
+              <h5 class="card-title">{{ financialStatements.symbol }}</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+    </div> -->
+    
+        <div class="card">
+            <h5 class="card-header">Income Satement</h5>
+            <div class="card-body">
+              <h5 class="card-title">Revenue <span>(all numbers in thousands)</span></h5>
+              <table class="table">
+                  <tr> 
+                    <th>Report Date</th>
+                    <ng-container *ngFor="let statement of financialStatements">
+                    <td><p class="text-right">{{statement.reportDate | date}}</p></td>
+                    </ng-container>
+                  </tr>
+                <tbody>
+                  <tr>
+                    <th>Operating Income</th>
+                    <ng-container *ngFor="let statement of financialStatements">
+                      <td><p class="text-right">{{statement.operatingIncome / 1000 }}</p></td>
+                      </ng-container>
+                  </tr>
+                  <tr>
+                      <th>Operating Expenses</th>
+                      <ng-container *ngFor="let statement of financialStatements">
+                        <td><p class="text-right">{{statement.operatingExpense / 1000 }}</p></td>
+                        </ng-container>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+
+
+    
+
+  </div>
+</div>
+

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { DividendPicksComponent } from './dividend-picks/dividend-picks.componen
 import { TopbarComponent } from './topbar/topbar.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { FinancialComponent } from './financial/financial.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     DividendPicksComponent,
     TopbarComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    FinancialComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,9 @@ import { HomeComponent } from './home/home.component';
     HighchartsChartModule,
     SharedModule,
     AgGridModule.withComponents([]),
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
