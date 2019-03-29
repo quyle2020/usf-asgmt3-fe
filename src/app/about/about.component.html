@@ -9,16 +9,12 @@
             <h5 class="card-header">PROJECT BUSINESS SERVICE</h5>
             <div class="card-body">
                 <p class="card-text">
-                    BONZAI&trade; is a fictional business service created for the purpose of a master's project 
-                    for course ISM 6255 (Distributed Information Systems). BONZAI&trade; was inspired by the 
-                    Japanese meaning of Bonsai. <i>Bonsai</i> is an asian art form using cultivation techniques 
-                    to produce small trees. Bonsai trees are known for its resilience and its ability grow in obscure 
-                    places given the right conditions. Likewise, this business service BONZAI&trade;, could provide guidance 
-                    to its customers by providing insights that could generate income even in a high volatility 
-                    market. In a real-world application, we would apply machine learning and AI to discover 
-                    dividend stocks suited to the customer's needs. The deployed application utilizes IEX Trading 
-                    APIs. The web app generates list of long term best dividend stocks, list of best dividend 
-                    stocks by sector, list of company's top picks and allows the customer to search stocks.
+                        BONZAI&trade; is a fictional business service created for the purpose of a master's project 
+                        for course ISM 6255 (Distributed Information Systems). BONZAI&trade; was inspired by the 
+                        Japanese meaning of Bonsai. <i>Bonsai</i> is an asian art form using cultivation techniques 
+                        to produce small trees. Bonsai trees are known for its resilience and its ability grow in obscure 
+                        places given the right conditions. Likewise, this business service BONZAI&trade;, could provide insights 
+                        to stocks. 
                 </p>
             </div>
         </div>
@@ -64,10 +60,14 @@
                 <div class="card-body">
                     <h5 class="card-title">Technology involved in the project development</h5>
                     <p>
-                        Frontend Angular application connects to custome API written in .NET Core.
-                        .NET Core syncs SQL Database and returned data from API call.
-                        Final web application is deployed to Azure.
+                        The deployed application utilizes four endpoints from the IEX Trading APIs. The .NET Core 
+                        backend was written to retrieve the desired stock information and store it into an SQL 
+                        Database on Azure Cloud. <i>(We only stored a few stock symbols to the database such as:
+                        AAPL, MSFT, KO).</i> The .NET Core provides the API service to the front end which 
+                        was wrtten in Angular 7 and utilizing HighCharts for charting. The final app is deployed
+                        to Azure Cloud.
                     </p>
+                    <img src="../../assets/img/ISM6225-Project.png" class="img-fluid mx-auto d-block" style="max-width:50%">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>Frontend</b> : Angular 7</li>
                         <li class="list-group-item"><b>Charting</b> : Highcharts</li>
@@ -86,7 +86,7 @@
                 <h5 class="card-header">ACHIEVEMENTS</h5>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Learnt <i>Angular 7, TypeScript, Bootstrap 4, C# 7 (ASP .NET Core), Azure</i></li>
+                        <li class="list-group-item">Learned <i>Angular 7, TypeScript, Bootstrap 4, C# 7 (ASP .NET Core), Azure</i></li>
                         <li class="list-group-item">Experience using advanced charting tools like <i>Highcharts</i></li>
                         <li class="list-group-item">Working experience on cross-platform development</li>
                         <li class="list-group-item">Learned how to deploy your project to the cloud</li>
