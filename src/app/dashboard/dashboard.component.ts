@@ -8,7 +8,7 @@ import * as Highcharts from 'highcharts';
 })
 export class DashboardComponent implements OnInit {
 
-  pageName = 'Welcome!';
+  pageName = 'Sample Dashboard';
 
   // chart parameters
   Highcharts = Highcharts;

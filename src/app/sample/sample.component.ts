@@ -10,7 +10,7 @@ import { SampleService } from '../service/sample.service';
 })
 export class SampleComponent implements OnInit {
 
-  pageName = 'Sample';
+  pageName = 'Sample Dashboard';
 
   private sampleData: Array<object> = [];
 

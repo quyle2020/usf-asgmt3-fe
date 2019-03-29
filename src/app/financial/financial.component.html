@@ -9,7 +9,7 @@
         <div class="card-body">
             <form class="form-inline">
                 <div class="form-group mx-sm-3 mb-2">
-                  <input class="form-control" type="text" [formControl]="symbolName" />
+                  <input class="form-control text-uppercase" type="text" [formControl]="symbolName" [(ngModel)]="defaultSymbol" />
                 </div>
                 <button (click)="findSymbol()" class="btn btn-dark mb-2">Find Symbol</button>
               </form>

@@ -20,6 +20,7 @@ export class FinancialComponent implements OnInit {
   financialStatements: StockFinancial[] = [];
   stockDetails: StockDetail;
   show = false;
+  defaultSymbol = 'AAPL';
 
   constructor(private symbolService: SymbolService) { }
 

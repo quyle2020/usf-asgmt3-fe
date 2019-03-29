@@ -52,4 +52,5 @@ import { FinancialComponent } from './financial/financial.component';
 })
 export class AppModule {
   public isCollapsed = false;
+
 }
