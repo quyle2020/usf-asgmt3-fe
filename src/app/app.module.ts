@@ -20,8 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { SampleComponent } from './sample/sample.component';
 import { DividendsComponent } from './dividends/dividends.component';
 import { DividendPicksComponent } from './dividend-picks/dividend-picks.component';
-import { TopbarComponent } from './topbar/topbar.component';
-
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { FinancialComponent } from './financial/financial.component';
