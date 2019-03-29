@@ -51,6 +51,5 @@ import { FinancialComponent } from './financial/financial.component';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  public isCollapsed = false;
 
 }

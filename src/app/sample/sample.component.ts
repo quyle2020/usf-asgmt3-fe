@@ -12,7 +12,7 @@ export class SampleComponent implements OnInit {
 
   pageName = 'Sample Dashboard';
 
-  private sampleData: Array<object> = [];
+  sampleData: Array<object> = [];
 
   constructor(private sampleService: SampleService) { }
 
