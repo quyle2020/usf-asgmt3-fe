@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,8 @@ import { TopbarComponent } from './topbar/topbar.component';
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { FinancialComponent } from './financial/financial.component';
+import { PriceComponent } from './price/price.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { HomeComponent } from './home/home.component';
 
     TopbarComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    FinancialComponent,
+    PriceComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,9 @@ import { HomeComponent } from './home/home.component';
     AngularFontAwesomeModule,
     SharedModule,
     AgGridModule.withComponents([]),
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
