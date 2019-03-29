@@ -1,14 +1,10 @@
-body {
-    font-size: .875rem;
+.chart-container {
+    position: relative;
+    height: 400px;
 }
 
-.feather {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-bottom;
+.highchart-container {
+    width: 100%;
+    height: 400px;
+    display: block;
 }
-
-
-/*
- * Sidebar
- */

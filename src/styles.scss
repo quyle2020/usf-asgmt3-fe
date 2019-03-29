@@ -15,20 +15,23 @@ h6 {
 }
 
 [class*="highcharts"] {
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Titillium Web', sans-serif;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Titillium Web', sans-serif;
+    }
+    [class*="highcharts"] {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .nav-bg {
+        background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+    }
 }
 
-[class*="highcharts"]{
-
-    font-family: 'Montserrat', sans-serif;
+.jumbotron {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
 }
-
-.nav-bg {
-    background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
-
-}
-
-  }
-

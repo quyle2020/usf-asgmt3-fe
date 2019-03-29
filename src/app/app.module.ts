@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -20,6 +22,7 @@ import { DividendPicksComponent } from './dividend-picks/dividend-picks.componen
 import { TopbarComponent } from './topbar/topbar.component';
 
 import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { AboutComponent } from './about/about.component';
     DividendPicksComponent,
 
     TopbarComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,10 +48,13 @@ import { AboutComponent } from './about/about.component';
     HighchartsChartModule,
     AngularFontAwesomeModule,
     SharedModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 
 })
-export class AppModule { }
+export class AppModule {
+  public isCollapsed = false;
+}

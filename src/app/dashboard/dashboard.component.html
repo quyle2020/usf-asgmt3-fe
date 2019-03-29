@@ -1,22 +1,20 @@
-<h2>
-    {{ pageName }}
+<div class="jumbotron">
+    <h1>{{ pageName }}</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div>
+            <p>{{sampleData}}</p>
+        </div>
+    </div>
 
-</h2>
+</div>
 <h4 class="text-muted">
     Stock Performers
 </h4>
-<hr/>
+<hr />
 
 <div class="row">
-
-  </h2>
-  <h4 class="text-muted">
-    Stock Performers
-  </h4>
-  <hr/>
-  
-  <div class="row">
-
     <div class="chart-container col-md-4">
         <highcharts-chart class="highchart-container" [Highcharts]="Highcharts" [options]="pieChart"></highcharts-chart>
     </div>
@@ -34,10 +32,4 @@
 <div style="overflow:hidden;">
     <ag-grid-angular class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs" (gridReady)="onGridReady($event)">
     </ag-grid-angular>
-
 </div>
-
-  </div>
-
-  
-
