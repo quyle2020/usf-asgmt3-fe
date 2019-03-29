@@ -28,8 +28,8 @@ export class SymbolService {
     return this.http.get<StockFinancial[]>(this.baseUrl + '/stock/getStockFinance/' + symbol);
   }
 
-  getStockDetail(symbol: string): Observable<StockDetail[]> {
-    return this.http.get<StockDetail[]>(this.baseUrl + '/stock/getStockDetail/' + symbol);
+  getStockDetail(symbol: string): Observable<StockDetail> {
+    return this.http.get<StockDetail>(this.baseUrl + '/stock/getStockDetail/' + symbol);
   }
 
 }
