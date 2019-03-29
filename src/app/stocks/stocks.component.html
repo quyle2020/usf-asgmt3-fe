@@ -3,8 +3,30 @@
 </div>
 <div class="container">
   <div class="row">
-    <div>
-
+    <div class="chart-container">
+      <highcharts-chart class="highchart-container"
+                        [Highcharts]="Highcharts"
+                        [(update)]="updateFromInput"
+                        [oneToOne]="true"
+                        [options]="lineChart1y"></highcharts-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="chart-container">
+      <highcharts-chart class="highchart-container"
+                        [Highcharts]="Highcharts"
+                        [(update)]="updateFromInput1"
+                        [oneToOne]="true"
+                        [options]="lineChart6m"></highcharts-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="chart-container">
+      <highcharts-chart class="highchart-container"
+                        [Highcharts]="Highcharts"
+                        [(update)]="updateFromInput2"
+                        [oneToOne]="true"
+                        [options]="lineChart3m"></highcharts-chart>
     </div>
   </div>
 
