@@ -1,5 +1,10 @@
 {
+<<<<<<< HEAD
   "ExpandedNodes": [
+<<<<<<< HEAD
+    ""
+  ],
+=======
     "",
     "\\src",
     "\\src\\app",
@@ -15,5 +20,25 @@
     "\\src\\environments"
   ],
   "SelectedNode": "\\src\\main.ts",
+>>>>>>> 8e640ea905ef68f91581740a6078a48d12501bdc
   "PreviewInSolutionExplorer": false
+=======
+    "ExpandedNodes": [
+        "",
+        "\\src",
+        "\\src\\app",
+        "\\src\\app\\home",
+        "\\src\\app\\sample",
+        "\\src\\app\\service",
+        "\\src\\app\\shared",
+        "\\src\\app\\sidebar",
+        "\\src\\app\\stocks",
+        "\\src\\app\\stocks-detail",
+        "\\src\\app\\topbar",
+        "\\src\\assets",
+        "\\src\\environments"
+    ],
+    "SelectedNode": "\\src\\main.ts",
+    "PreviewInSolutionExplorer": false
+>>>>>>> 23b514e04e1db5ff3659d63db8a0467dabbe6a20
 }

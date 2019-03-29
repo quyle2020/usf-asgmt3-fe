@@ -1,46 +1,35 @@
 <div class="jumbotron">
-  <h1>{{ pageName }}</h1>
+    <h1>{{ pageName }}</h1>
 </div>
 <div class="container">
-  <div class="row">
-    <div>
-      <p>{{sampleData}}</p>
+    <div class="row">
+        <div>
+            <p>{{sampleData}}</p>
+        </div>
     </div>
-  </div>
 
 </div>
 <h4 class="text-muted">
-  Stock Performers
+    Stock Performers
 </h4>
 <hr />
 
 <div class="row">
-  <div class="chart-container col-md-4">
-    <highcharts-chart class="highchart-container"
-                      [Highcharts]="Highcharts"
-                      [options]="pieChart"></highcharts-chart>
-  </div>
-  <div class="chart-container col-md-8">
-    <highcharts-chart class="highchart-container"
-                      [Highcharts]="Highcharts"
-                      [options]="lineChart"></highcharts-chart>
-  </div>
+    <div class="chart-container col-md-4">
+        <highcharts-chart class="highchart-container" [Highcharts]="Highcharts" [options]="pieChart"></highcharts-chart>
+    </div>
+    <div class="chart-container col-md-8">
+        <highcharts-chart class="highchart-container" [Highcharts]="Highcharts" [options]="lineChart"></highcharts-chart>
+    </div>
 </div>
 <hr />
 
 <div class="chart-container">
-  <highcharts-chart class="highchart-container"
-                    [Highcharts]="Highcharts"
-                    [options]="barChart"></highcharts-chart>
+    <highcharts-chart class="highchart-container" [Highcharts]="Highcharts" [options]="barChart"></highcharts-chart>
 </div>
 <hr />
 
 <div style="overflow:hidden;">
-  <ag-grid-angular class="ag-theme-balham"
-                   [rowData]="rowData"
-                   [columnDefs]="columnDefs"
-                   (gridReady)="onGridReady($event)">
-  </ag-grid-angular>
+    <ag-grid-angular class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs" (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
 </div>
-
-

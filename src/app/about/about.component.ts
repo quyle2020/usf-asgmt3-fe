@@ -9,7 +9,7 @@ export class AboutComponent implements OnInit {
 
   pageName = 'About';
 
-  constructor() { }
+ constructor() { }
 
   ngOnInit() {
   }

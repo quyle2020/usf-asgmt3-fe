@@ -1,4 +1,15 @@
 .navbar {
+
+    padding: .5rem 0;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 768px) {
+    #topbar {
+        display: none;
+    }
+}
+
   padding: .5rem 0;
 }
 
@@ -7,4 +18,9 @@
   #topbar {
     display: none;
   }
+<<<<<<< HEAD
+ }
+
+=======
 }
+>>>>>>> 8e640ea905ef68f91581740a6078a48d12501bdc

@@ -11,17 +11,20 @@ import { SampleService } from '../service/sample.service';
 export class SampleComponent implements OnInit {
 
   pageName = 'Sample';
-  sampleData = '';
+
+  private sampleData: Array<object> = [];
 
   constructor(private sampleService: SampleService) { }
 
   ngOnInit() {
 
     this.sampleService.getSampleData()
-    .subscribe(data => {
-      this.sampleData = JSON.stringify(data, null, 2);
+    .subscribe((data: Array<object>) => {
+      this.sampleData = data;
+      console.log(data);
     });
   }
 
 }
+
 

@@ -8,6 +8,7 @@ import { DividendsComponent } from './dividends/dividends.component';
 import { DividendPicksComponent } from './dividend-picks/dividend-picks.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { FinancialComponent } from './financial/financial.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'dividends', component: DividendsComponent },
   { path: 'dividend-picks', component: DividendPicksComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'financial', component: FinancialComponent }
 ];
 
 @NgModule({
