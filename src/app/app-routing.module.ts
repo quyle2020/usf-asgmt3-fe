@@ -9,9 +9,10 @@ import { DividendPicksComponent } from './dividend-picks/dividend-picks.componen
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { FinancialComponent } from './financial/financial.component';
+import { SampleTabsComponent } from './sample-tabs/sample-tabs.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'stocks', component: StocksComponent },
   { path: 'stock-detail', component: StocksDetailComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'dividend-picks', component: DividendPicksComponent },
   { path: 'about', component: AboutComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'financial', component: FinancialComponent }
+  { path: 'financial', component: FinancialComponent },
+  { path: 'sample-tabs', component: SampleTabsComponent }
 ];
 
 @NgModule({

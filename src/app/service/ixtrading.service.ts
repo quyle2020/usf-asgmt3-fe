@@ -24,4 +24,8 @@ export class IxtradingService {
   getPrice3m(symbol:string): Observable<StockPrice[]> {
     return this.http.get<StockPrice[]>(this.baseUrl + '/stock/' + symbol + '/chart/3m');
   }
+  
+  getPrice(symbol:string, duration: string): Observable<StockPrice[]> {
+    return this.http.get<StockPrice[]>(this.baseUrl + '/stock/' + symbol + '/chart/' + duration);
+  }
 }

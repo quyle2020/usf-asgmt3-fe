@@ -1,0 +1,63 @@
+<div class="jumbotron">
+  <h1>{{ pageName }}</h1>
+</div>
+<div class="container">
+
+<div class="row">
+    <div class="card mb-3 w-100">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input class="form-control text-uppercase" type="text" [formControl]="symbolName" [(ngModel)]="defaultSymbol" />
+                </div>
+                <button (click)="findSymbol()" class="btn btn-dark mb-2">Find Symbol</button>
+              </form>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Nav Tabs -->
+<ngb-tabset class="tabset1">
+    <ngb-tab title="1Y">
+        <ng-template ngbTabContent>
+            <div class="row">
+                <div class="chart-container col-12">
+                  <highcharts-chart class="highchart-container"
+                                    [Highcharts]="Highcharts"
+                                    [(update)]="updateFromInput"
+                                    [oneToOne]="true"
+                                    [options]="lineChart1y"></highcharts-chart>
+                </div>
+              </div>
+        </ng-template>
+    </ngb-tab>
+    <ngb-tab title="6 Months">
+        <ng-template ngbTabContent>
+            <div class="row">
+                <div class="chart-container col-12">
+                  <highcharts-chart class="highchart-container"
+                                    [Highcharts]="Highcharts"
+                                    [(update)]="updateFromInput1"
+                                    [oneToOne]="true"
+                                    [options]="lineChart6m"></highcharts-chart>
+                </div>
+              </div>
+        </ng-template>
+    </ngb-tab>
+    <ngb-tab title="3 Months">
+        <ng-template ngbTabContent>
+            <div class="row">
+                <div class="chart-container col-12">
+                  <highcharts-chart class="highchart-container"
+                                    [Highcharts]="Highcharts"
+                                    [(update)]="updateFromInput2"
+                                    [oneToOne]="true"
+                                    [options]="lineChart3m"></highcharts-chart>
+                </div>
+              </div>
+        </ng-template>
+    </ngb-tab>
+</ngb-tabset>
+
+</div>
