@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IxtradingService } from '../service/ixtrading.service';
 import { FormControl } from '@angular/forms';
 import * as Highcharts from 'highcharts';
-import * as moment from 'moment'
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-sample-tabs',
@@ -33,12 +33,12 @@ export class SampleTabsComponent implements OnInit {
     this.lineChart1y = this.lineChartOption();
     this.lineChart6m = this.lineChartOption();
     this.lineChart3m = this.lineChartOption();
-   
+
   }
 
   findSymbol() {
     this.show = false;
-    
+
     this.lineChart1y.series = [];
     this.lineChart6m.series = [];
     this.lineChart3m.series = [];
@@ -48,21 +48,20 @@ export class SampleTabsComponent implements OnInit {
     this.loadLineChart1y(this.symbolName.value);
     this.loadLineChart6m(this.symbolName.value);
     this.loadLineChart3m(this.symbolName.value);
-    
+
     this.show = true;
   }
 
-  loadLineChart1y(symbol: string)
-  {
+  loadLineChart1y(symbol: string) {
     setTimeout(() => {
       this.ixtradingService.getPrice1y(symbol)
       .subscribe((res) => {
 
-          var series = { 
+          var series = {
           name: symbol,
           data: []
         };
-        
+
         // populate plotting points
         res.forEach((x) =>{
           series.data.push(x.close);
