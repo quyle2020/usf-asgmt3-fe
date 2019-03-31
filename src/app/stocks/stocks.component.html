@@ -19,66 +19,40 @@
 
 
 <!-- Nav Tabs -->
-<div class="row">
-  <form [formGroup]="dateSpan">
-    <div class="btn-group btn-group-toggle" ngbRadioGroup name="dateSelect" formControlName="model">
-      <label ngbButtonLabel class="btn-dark">
-        <input ngbButton type="radio" value="1y"> 1y
-      </label>
-      <label ngbButtonLabel class="btn-dark">
-        <input ngbButton type="radio" value="6m"> 6m
-      </label>
-      <label ngbButtonLabel class="btn-dark">
-        <input ngbButton type="radio" value="3m"> 3m
-      </label>
-    </div>
-  </form> 
-</div>
-<hr>
-<div class="container-fluid">
+<div class="container-fluid" [hidden]="stockDetails == null">
   <div class="row">
     <div class="d-flex p-2">
       <p class="h4" *ngIf="stockDetails" > {{ stockDetails.companyName }} ({{ stockDetails.symbol }})</p>
+   
     </div>
   </div>
+  <hr>
   <div class="row">
-      <div [ngSwitch]="dateSpan.value['model']">
-          <ng-template ngSwitchDefault>
-            <div class="row">
-              <div class="chart-container col-12" id="container">
+              <div class="chart-container col-md-4" id="container">
+                <h3>1 year</h3>
                 <highcharts-chart class="highchart-container"
                                   [Highcharts]="Highcharts"
                                   [(update)]="updateFromInput"
                                   [oneToOne]="true"
                                   [options]="lineChart1y"></highcharts-chart>
               </div>
+              <div class="chart-container col-md-4">
+                  <h3>6 months</h3>
+                  <highcharts-chart class="highchart-container"
+                                    [Highcharts]="Highcharts"
+                                    [(update)]="updateFromInput1"
+                                    [oneToOne]="true"
+                                    [options]="lineChart6m"></highcharts-chart>
             </div>
-          </ng-template>
-          <ng-template ngSwitchCase="6m">
-              <div class="row">
-                  <div class="chart-container col-12">
-                    <highcharts-chart class="highchart-container"
-                                      [Highcharts]="Highcharts"
-                                      [(update)]="updateFromInput1"
-                                      [oneToOne]="true"
-                                      [options]="lineChart6m"></highcharts-chart>
-                  </div>
-                </div>
-          </ng-template>
-          <ng-template ngSwitchCase="3m">
-              <div class="row">
-                  <div class="chart-container col-12">
-                    <highcharts-chart class="highchart-container"
-                                      [Highcharts]="Highcharts"
-                                      [(update)]="updateFromInput2"
-                                      [oneToOne]="true"
-                                      [options]="lineChart3m"></highcharts-chart>
-                  </div>
-                </div>
-          </ng-template>
+            <div class="chart-container col-md-4">
+                <h3>3 months</h3>
+                <highcharts-chart class="highchart-container"
+                                  [Highcharts]="Highcharts"
+                                  [(update)]="updateFromInput2"
+                                  [oneToOne]="true"
+                                  [options]="lineChart3m"></highcharts-chart>
+              </div>
         </div>
   </div>
 </div>
 
-
-</div>

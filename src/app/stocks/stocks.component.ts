@@ -9,7 +9,7 @@ import * as moment from 'moment';
 @Component({
   selector: 'app-stocks',
   templateUrl: './stocks.component.html',
-  styleUrls: ['./stocks.component.sass'],
+  styleUrls: ['./stocks.component.scss'],
   providers: [IxtradingService, SymbolService]
 })
 export class StocksComponent implements OnInit {
