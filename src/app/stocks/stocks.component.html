@@ -38,7 +38,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="d-flex p-2">
-      <p class="h4"> {{ stockDetails.companyName }} ({{ stockDetails.symbol }})</p>
+      <p class="h4" *ngIf="stockDetails" > {{ stockDetails.companyName }} ({{ stockDetails.symbol }})</p>
     </div>
   </div>
   <div class="row">
