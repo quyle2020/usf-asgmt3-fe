@@ -9,10 +9,7 @@
     "\\src\\app\\shared",
     "\\src\\app\\sidebar",
     "\\src\\app\\stocks",
-    "\\src\\app\\stocks-detail",
-    "\\src\\app\\topbar",
-    "\\src\\assets",
-    "\\src\\environments"
+    "\\src\\app\\stocks-detail"
   ],
   "SelectedNode": "\\src\\main.ts",
   "PreviewInSolutionExplorer": false

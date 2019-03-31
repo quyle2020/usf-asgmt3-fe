@@ -1,0 +1,92 @@
+<div class="jumbotron">
+  <h1>{{ pageName }}</h1>
+</div>
+
+<div class="container-fluid">
+<div class="row">
+
+    <div class="card mb-3 w-100">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input class="form-control text-uppercase" type="text" [formControl]="symbolName" [(ngModel)]="defaultSymbol" />
+                </div>
+                <button (click)="findSymbol()" class="btn btn-dark mb-2">Find Symbol</button>
+              </form>
+        </div>
+      </div>
+    </div>
+
+
+  <div *ngIf="show">
+
+    <div class="row mb-3">
+        <div class="card text-white bg-dark mb-3 w-100">
+            <div class="card-header text-uppercase">{{ stockDetails.exchange }}</div>
+            <div class="card-body">
+              <div class="row">
+                  <div class="col">
+                      <h5 class="card-title">{{ stockDetails.companyName }} ({{ stockDetails.symbol }})</h5>
+                      <p class="card-text">{{ stockDetails.description }}</p>
+                  </div>
+                  <div class="col">
+                      <div class="card-body">
+                        <h6 class="card-title">Details</h6>
+                        <ul>
+                          <li>Sector: {{ stockDetails.sector }}</li>
+                          <li>Industry: {{ stockDetails.industry }}</li>
+                          <li>CEO: {{ stockDetails.ceo }}</li>
+                          <li>Website: {{ stockDetails.website }}</li>
+                        </ul>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="card w-100">
+            <h5 class="card-header text-uppercase">Income Satement</h5>
+            <div class="card-body">
+              <h5 class="card-title">Revenue <span>(all numbers in thousands)</span></h5>
+              <table class="table table-responsive-sm">
+                  <tr class="bg-light"> 
+                    <th>Report Date</th>
+                    <ng-container *ngFor="let statement of financialStatements">
+                    <td><p class="text-right">{{statement.reportDate | date}}</p></td>
+                    </ng-container>
+                  </tr>
+                <tbody>
+                  <tr>
+                    <th>Operating Income</th>
+                    <ng-container *ngFor="let statement of financialStatements">
+                      <td><p class="text-right">{{statement.operatingIncome / 1000 }}</p></td>
+                      </ng-container>
+                  </tr>
+                  <tr>
+                      <th>Operating Expenses</th>
+                      <ng-container *ngFor="let statement of financialStatements">
+                        <td><p class="text-right">{{statement.operatingExpense / 1000 }}</p></td>
+                        </ng-container>
+                  </tr>
+                  <tr class="bg-light">
+                      <th>Gross Profit</th>
+                      <ng-container *ngFor="let statement of financialStatements">
+                        <td class="font-weight-bold"><p class="text-right">{{statement.grossProfit / 1000 }}</p></td>
+                        </ng-container>
+                  </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+
+    
+
+  </div>
+
+
+</div>

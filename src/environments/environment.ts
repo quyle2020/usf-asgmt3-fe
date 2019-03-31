@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://asgmt3-api.azurewebsites.net'  
+  baseUrl: 'https://asgmt3-api.azurewebsites.net',
+  ixBaseUrl: 'https://api.iextrading.com/1.0'
 };
 
 /*

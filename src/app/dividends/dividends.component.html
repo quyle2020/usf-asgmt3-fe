@@ -1,12 +1,59 @@
 <div class="jumbotron">
   <h1>{{ pageName }}</h1>
 </div>
-<div class="container">
-  <div class="row">
-    <div>
-      <p></p>
+
+<div class="container-fluid">
+<div class="row">
+
+    <div class="card mb-3 w-100">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input class="form-control text-uppercase" type="text" [formControl]="symbolName" [(ngModel)]="defaultSymbol" />
+                </div>
+                <button (click)="findSymbol()" class="btn btn-dark mb-2">Find Symbol</button>
+              </form>
+        </div>
+      </div>
     </div>
+
+
+  <div *ngIf="show">
+
+    <div class="row">
+
+      <table class="table table-responsive-sm table-striped">
+        <thead>
+          <tr>
+            <th scope="col" sortable="symbol" (sort)="onSort($event)">Symbol</th>
+            <th scope="col" sortable="exDate" (sort)="onSort($event)">ex-Date</th>
+            <th scope="col" sortable="paymentDate" (sort)="onSort($event)">Payment Date</th>
+            <th scope="col" sortable="recordDate" (sort)="onSort($event)">Record Date</th>
+            <th scope="col" sortable="declaredDate" (sort)="onSort($event)">Declared Date</th>
+            <th scope="col" sortable="amount" (sort)="onSort($event)">Amount</th>
+            <th scope="col" sortable="type" (sort)="onSort($event)">Type</th>
+            <th scope="col" sortable="qualified" (sort)="onSort($event)">Qualified</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dividendData">
+            <th scope="row">{{data.symbol}}</th>
+            <td>{{data.exDate | date }}</td>
+            <td>{{data.paymentDate | date }}</td>
+            <td>{{data.recordDate | date }}</td>
+            <td>{{data.declaredDate | date }}</td>
+            <td>{{data.amount | currency}}</td>
+            <td>{{data.type}}</td>
+            <td>{{data.qualified}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+
+    
+
   </div>
 
-</div>
 
+</div>

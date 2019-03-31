@@ -1,7 +1,12 @@
 <nav class="navbar navbar-light fixed-top nav-bg" id="topbar">
   <div class="container col-12">
-    <a class="navbar-brand mr-auto" href="/"><h3>BONZAI&trade;</h3></a>
-    <button class="navbar-toggler navbar-expand-sm" type="button" (click)="isCollapse = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="Navbar">
+    <h3>BONZAI&trade;</h3>
+    
+    <button class="navbar-toggler" type="button" 
+      data-toggle="collapse" data-target="#Navbar"
+      aria-expanded="false" aria-label="Toggle Menu" 
+      (click)="isCollapsed = !isCollapsed" 
+      [attr.aria-expanded]="!isCollapsed" aria-controls="Navbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -9,49 +14,37 @@
 
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a routerLink="/home" routerLinkActive="active" class="nav-link" href="home">
+          <a routerLink="/home" routerLinkActive="active" class="nav-link" href="home"  (click)="isCollapsed = !isCollapsed">
             <i-home></i-home>
             Home
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link" href="dashboard">
-            <i-activity></i-activity>
-            Dashboard
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/stocks" routerLinkActive="active" class="nav-link" href="stocks">
+          <a routerLink="/stocks" routerLinkActive="active" class="nav-link" href="stocks"  (click)="isCollapsed = !isCollapsed">
             <i-bar-chart-2></i-bar-chart-2>
             Stocks
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/dividends" routerLinkActive="active" class="nav-link" href="dividends">
+          <a routerLink="/dividends" routerLinkActive="active" class="nav-link" href="dividends"  (click)="isCollapsed = !isCollapsed">
             <i-dollar-sign></i-dollar-sign>
             Dividends
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/dividend-picks" routerLinkActive="active" class="nav-link" href="dividend-picks">
-            <i-thumbs-up></i-thumbs-up>
-            Dividend Picks
-          </a>
-        </li>
+            <a routerLink="/financial" routerLinkActive="active" class="nav-link" href="financial" (click)="isCollapsed = !isCollapsed">
+              <i-pie-chart></i-pie-chart>
+              Fiancial statements
+            </a>
+          </li>
         <li class="nav-item">
-          <a routerLink="/sample" routerLinkActive="active" class="nav-link" href="sample">
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link" href="dashboard"  (click)="isCollapsed = !isCollapsed">
             <i-file></i-file>
-            Sample API call
+            Sample
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/service" routerLinkActive="active" class="nav-link" href="service">
-            <i-layers></i-layers>
-            Integrations
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/about" routerLinkActive="active" class="nav-link" href="about">
+          <a routerLink="/about" routerLinkActive="active" class="nav-link" href="about"  (click)="isCollapsed = !isCollapsed">
             <i-info></i-info>
             About
           </a>

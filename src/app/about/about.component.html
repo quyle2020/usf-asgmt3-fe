@@ -3,9 +3,107 @@
   <h1>{{ pageName }}</h1>
 </div>
 <div class="container">
-  <div class="row">
-    <div>
-    </div>
-  </div>
+    <div class="row">
+        <!--Poject Theme-->
+        <div class="card mb-3">
+            <h5 class="card-header">PROJECT BUSINESS SERVICE</h5>
+            <div class="card-body">
+                <p class="card-text">
+                        BONZAI&trade; is a fictional business service created for the purpose of a master's project 
+                        for course ISM 6225 (Distributed Information Systems). BONZAI&trade; was inspired by the 
+                        Japanese meaning of Bonsai. <i>Bonsai</i> is an asian art form using cultivation techniques 
+                        to produce small trees. Bonsai trees are known for its resilience and its ability grow in obscure 
+                        places given the right conditions. Likewise, this business service BONZAI&trade;, could provide insights 
+                        to stocks. 
+                </p>
+            </div>
+        </div>
+      </div>
+        <!--About Project Team members-->
+        <div class="row">
+            <div class="card mb-3">
+                <h5 class="card-header">PROJECT TEAM</h5>
+                <div class="card-body">
+                    <div class="card-group">
+
+                        <div class="card border-0">
+                          <div class="card-body">
+                            <h5 class="card-title">Meena Sundinti</h5>
+                            <p class="card-text">Meena has around 8 years experience in IT. She is currently working for AAA Auto Club Group. Supplying data for Membership Point Of Contact ,Finance ,Marketing and Analytics Department via Data Warehouse tools.</p>
+                          </div>
+                        </div>
+
+                        <div class="card border-0">
+                          <div class="card-body">
+                            <h5 class="card-title">Kham Sanvoravong</h5>
+                            <p class="card-text">Kham has a Master in Electrical Engineering and works in manufacturing improving processes and design. He aspires to work on autonomous systems such as drones, automobiles, or other vehicles of transport. His goal is to start a business one day.</p>
+                          </div>
+                        </div>
+
+                        <div class="card border-0">
+                          <div class="card-body">
+                            <h5 class="card-title">Quy Le</h5>
+                            <p class="card-text">Quy has more than 15 years experience in IT. He has recently switched to a manufacturing job to be more aligned with data science career path. Quy is planning to obtain an architecture role in three years and a C-level executive in five years respectively.</p>
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Technolgy in development of this project-->
+        <div class="row">
+            <div class="card mb-3">
+                <h5 class="card-header">TECHNOLOGY</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Technology involved in the project development</h5>
+                    <p>
+                        The deployed application utilizes four endpoints from the IEX Trading APIs. The .NET Core 
+                        backend was written to retrieve the desired stock information and store it into an SQL 
+                        Database on Azure Cloud. <i>(We only stored a few stock symbols to the database such as:
+                        AAPL, MSFT, KO).</i> The .NET Core provides the API service to the front end which 
+                        was wrtten in Angular 7 and utilizing HighCharts for charting. The final app is deployed
+                        to Azure Cloud.
+                    </p>
+                    <img src="../../assets/img/ISM6225-Project.png" class="col-8 col-md-10 col-sm-12 mx-auto d-block">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Frontend</b> : Angular 7</li>
+                        <li class="list-group-item"><b>Charting</b> : Highcharts</li>
+                        <li class="list-group-item"><b>Backend</b> : .NET Core using IEX Trading API with four end-points</li>
+                        <li class="list-group-item"><b>Database</b> : SQL Database</li>
+                        <li class="list-group-item"><b>API</b> : IEX Trading API</li>
+                        <li class="list-group-item"><b>Cloud</b> : Azure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Takeaways from this project-->
+        <div class="row">
+            <div class="card mb-3 w-100">
+                <h5 class="card-header">ACHIEVEMENTS</h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Learned <i>Angular 7, TypeScript, Bootstrap 4, C# 7 (ASP .NET Core), Azure</i></li>
+                        <li class="list-group-item">Experience using advanced charting tools like <i>Highcharts</i></li>
+                        <li class="list-group-item">Working experience on cross-platform development</li>
+                        <li class="list-group-item">Learned how to deploy your project to the cloud</li>
+                        <li class="list-group-item">Learnt the concept of dependency injection</li>
+                        <li class="list-group-item">Learned the value of <i>table-value parameters</i> for speed and cost savings</li>
+                        <li class="list-group-item">Learnt of Type-Safe JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <blockquote class="blockquote text-right">
+              <p class="font-italic">"None of us, including me, ever do great things. But we can all do small things, with great love, and together we can do something wonderful."</p>
+              <footer class="blockquote-footer"><cite title="Source Title">Mother Teresa</cite></footer>
+            </blockquote>
+        </div>
+    
 </div>
 

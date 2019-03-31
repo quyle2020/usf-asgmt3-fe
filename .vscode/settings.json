@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0aa40be9-4f28-4c67-a8df-41f0b144418f/resourceGroups/asgmt3-ui/providers/Microsoft.Web/sites/asgmt3-front-end",
+    "appService.deploySubpath": "dist\\usf-asgmt3-fe"
+}

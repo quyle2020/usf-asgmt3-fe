@@ -1,11 +1,58 @@
 <div class="jumbotron">
   <h1>{{ pageName }}</h1>
 </div>
-<div class="container">
-  <div class="row">
-    <div>
+<div class="container-fluid">
+  
 
+<div class="row">
+    <div class="card mb-3 w-100">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input class="form-control text-uppercase" type="text" [formControl]="symbolName" [(ngModel)]="defaultSymbol" />
+                </div>
+                <button (click)="findSymbol()" class="btn btn-dark mb-2">Find Symbol</button>
+              </form>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Nav Tabs -->
+<div class="container-fluid" [hidden]="stockDetails == null">
+  <div class="row">
+    <div class="d-flex p-2">
+      <p class="h4" *ngIf="stockDetails" > {{ stockDetails.companyName }} ({{ stockDetails.symbol }})</p>
+   
     </div>
   </div>
-
+  <hr>
+  <div class="row">
+              <div class="chart-container col-md-4" id="container">
+                <h3>1 year</h3>
+                <highcharts-chart class="highchart-container"
+                                  [Highcharts]="Highcharts"
+                                  [(update)]="updateFromInput"
+                                  [oneToOne]="true"
+                                  [options]="lineChart1y"></highcharts-chart>
+              </div>
+              <div class="chart-container col-md-4">
+                  <h3>6 months</h3>
+                  <highcharts-chart class="highchart-container"
+                                    [Highcharts]="Highcharts"
+                                    [(update)]="updateFromInput1"
+                                    [oneToOne]="true"
+                                    [options]="lineChart6m"></highcharts-chart>
+            </div>
+            <div class="chart-container col-md-4">
+                <h3>3 months</h3>
+                <highcharts-chart class="highchart-container"
+                                  [Highcharts]="Highcharts"
+                                  [(update)]="updateFromInput2"
+                                  [oneToOne]="true"
+                                  [options]="lineChart3m"></highcharts-chart>
+              </div>
+        </div>
+  </div>
 </div>
+
